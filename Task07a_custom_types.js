@@ -1,5 +1,6 @@
 const { apiRoot, projectKey } = require("./handson/client.js");
 const {log} = require('./logger');
+const {createCustomType} = require("./handson/customTypes.js")
 
 
 const typeDraft = {
@@ -25,5 +26,7 @@ const typeDraft = {
         required:false,
     }]
 }
+
+createCustomType(typeDraft).then(log).catch(log)
 
 // TODO : CREATE the custom type

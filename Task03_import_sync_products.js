@@ -10,24 +10,24 @@ const { log } = require("./logger.js");
 const containerKey = "ff-ImportContainer";
 
 // Create an import container
-createImportContainer(containerKey).then(log).catch(log);
+//createImportContainer(containerKey).then(log).catch(log);
 
 // import products
-// importProducts(containerKey).then(log).catch(log);
+//importProducts(containerKey).then(log).catch(log);
 
 // check import summary for your container
 // checkImportSummary(containerKey).then(log).catch(log);
 
 // check import operations for your container
-// checkImportOperations(containerKey).then(operations =>
-//    operations.body.results.forEach(operation =>
-//        log(operation.id + " : " +operation.state)
-//    )
-// )
+checkImportOperations(containerKey).then(operations =>
+   operations.body.results.forEach(operation =>
+       log(operation.id + " : " +operation.state)
+   )
+)
 
 // Check the status of import operations by their Ids
-//  checkImportOperationById("2e325e01-1193-4d8a-92c9-af29da1cc0fb").then(log).catch(log);
-//  checkImportOperationById("cd61acae-301d-4984-8dc2-2deb0ba5035c").then(log).catch(log);
+// checkImportOperationById("53ebab44-cb76-444b-924c-80956aa63aa2").then(log).catch(log);
+// checkImportOperationById("15d27fcc-2604-4ad9-a976-773f8f5f0eee").then(log).catch(log);
 
 
 
